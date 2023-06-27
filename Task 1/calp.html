@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(134, 117, 150);
+        }
+        h1{  
+            font-family: 'Alkatra', cursive;
+            text-align: center;
+            color: rgb(77, 9, 9);
+            font-size: 4rem;
+            text-shadow: 5px 5px rgb(93, 73, 73);
+        }
+        .cal{
+            text-align: center;
+            font-size: 3rem;
+            margin-left: 70vh;
+            width: 27vw;
+            height: 70vh;
+            background-color: rgb(88, 70, 105);
+            position: relative;
+            border-radius: 0.5rem;
+        }
+        #zero{ 
+            width: 160px; 
+            height: 70px;
+            font-size: 2rem;
+            border-radius: 0.7rem;
+            border-color: rgb(126, 61, 61);
+            background-color: rgb(170, 147, 147);
+        }
+        .btn{ 
+            width: 70px;
+            height: 70px;
+            font-size: 2rem;
+            border-radius: 0.7rem;
+            border-color: rgb(126, 61, 61);
+            background-color: rgb(149, 134, 134);
+        }
+        .opr{ 
+            width: 70px;
+            height: 70px;
+            font-size: 2rem;
+            border-radius: 0.7rem;
+            border-color: rgb(126, 61, 61);
+            background-color: rgb(170, 147, 147);
+        }
+        #display{ 
+            width: 290px; 
+            border-radius: 0.7rem; 
+            font-size: 2rem;
+            padding: 1.5rem;
+            background-color: rgb(219, 206, 206);
+            margin-top: 1.5rem;
+        }
+        input{
+            margin: 3px; 
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+    </style>
+    
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form action="calculator" class="cal" name="form1">
+        <input type="text" id="display" name="ans"></br>
+        <input type="button" class="btn" value="C" onclick="form1.ans.value=''">
+        <input type="button" class="btn" value="del" onclick="form1.ans.value=form1.ans.value.slice(0, -1)">
+        <input type="button" class="btn" value="00" onclick="form1.ans.value+='00'">
+        <input type="button" class="opr" value="/" onclick="form1.ans.value+='/'">
+    </br>
+        <input type="button" class="btn" value="7" onclick="form1.ans.value+='7'">
+        <input type="button" class="btn" value="8" onclick="form1.ans.value+='8'">
+        <input type="button" class="btn" value="9" onclick="form1.ans.value+='9'">
+        <input type="button" class="opr" value="*" onclick="form1.ans.value+='*'">
+    </br>
+        <input type="button" class="btn" value="4" onclick="form1.ans.value+='4'">
+        <input type="button" class="btn" value="5" onclick="form1.ans.value+='5'">
+        <input type="button" class="btn" value="6" onclick="form1.ans.value+='6'">
+        <input type="button" class="opr" value="-" onclick="form1.ans.value+='-'">
+    </br>
+        <input type="button" class="btn" value="1" onclick="form1.ans.value+='1'">
+        <input type="button" class="btn" value="2" onclick="form1.ans.value+='2'">
+        <input type="button" class="btn" value="3" onclick="form1.ans.value+='3'">
+        <input type="button" class="opr" value="+" onclick="form1.ans.value+='+'">
+    </br>
+        <input type="button" id="zero" value="0" onclick="form1.ans.value+='0'">
+        <input type="button" class="opr" value="." onclick="form1.ans.value+='.'">
+        <input type="button" class="opr" value="=" onclick="form1.ans.value=eval(form1.ans.value)">
+    </br>
+        
+    </form>
+</body>
+</html>
